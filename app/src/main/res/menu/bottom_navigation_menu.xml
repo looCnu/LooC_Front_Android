@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gallery_page"
+        android:enabled="true"
+        android:icon="@drawable/gallery_bottom_nav"
+        android:title="gallery"
+        >
+    </item>
+
+    <item
+        android:id="@+id/home_page"
+        android:enabled="true"
+        android:icon="@drawable/home_bottom_nav"
+        android:title="home"
+        >
+    </item>
+
+    <item
+        android:id="@+id/setting_page"
+        android:enabled="true"
+        android:icon="@drawable/setting_bottom_nav"
+        android:title="setting"
+        >
+    </item>
+</menu>
