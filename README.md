@@ -1,7 +1,7 @@
 # LooC_Front_Android
 
 
-- 사용된 기숭 -> Kotlin
+- 사용된 기술: Kotlin
 
 
 ### 리엑트 네이티브 ㅇㅓ렵네용,,,안드로이드로 바꿉니다 >_<
