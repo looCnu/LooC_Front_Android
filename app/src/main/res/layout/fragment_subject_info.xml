@@ -8,4 +8,18 @@
     android:background="@color/main_background_color">
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subject_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:layout_marginTop="-122dp"
+        tools:itemCount="1"
+
+        />
+
+
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

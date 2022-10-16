@@ -37,8 +37,9 @@ android {
 }
 
 dependencies {
-    //custom(button)
+    //UI
     implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
     //
 
     implementation("androidx.core:core-splashscreen:1.0.0")
