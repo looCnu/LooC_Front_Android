@@ -14,9 +14,9 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        tools:layout_marginTop="-122dp"
+        tools:layout_marginTop="0dp"
         tools:itemCount="1"
-
+        tools:listitem="@layout/fragment_subject_header"
         />
 
 

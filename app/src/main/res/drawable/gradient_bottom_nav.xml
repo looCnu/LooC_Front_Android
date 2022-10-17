@@ -8,8 +8,6 @@
         android:startColor="@color/black"
         android:centerY="0.8"
         android:type="linear"
-        >
-
-    </gradient>
+   />
 
 </shape>
