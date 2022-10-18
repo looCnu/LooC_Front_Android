@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.looc.R
-import com.example.looc.main.HomeActivity
+import com.example.looc.main.BottomNavActivity
 
 class LoginMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +15,7 @@ class LoginMainActivity : AppCompatActivity() {
         val loginBtn = findViewById<Button>(R.id.login_btn)
 
         loginBtn.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, BottomNavActivity::class.java)
             startActivity(intent)
             finish()
         }

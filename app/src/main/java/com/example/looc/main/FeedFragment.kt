@@ -1,23 +1,22 @@
 package com.example.looc.main
 
-import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
+
 import android.view.View
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentFactory
 import androidx.recyclerview.widget.RecyclerView
 import com.example.looc.R
+import com.example.looc.databinding.ActivityHomeBinding.inflate
+import com.example.looc.databinding.FragmentFeedBinding
 import kotlin.math.min
-import com.example.looc.databinding.FragmentSubjectInfoBinding
 
-class HomeFragment : MainFragment() {
 
-    private lateinit var binding: FragmentSubjectInfoBinding
+class FeedFragment : BottomNavFragment() {
+
+    private lateinit var binding: FragmentFeedBinding
     //private lateinit var feedViewModel: FeedViewModel
 
 
@@ -26,7 +25,7 @@ class HomeFragment : MainFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSubjectInfoBinding.inflate(inflater, container, false)
+        binding = FragmentFeedBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,6 +33,7 @@ class HomeFragment : MainFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupUI()
 
     }
 

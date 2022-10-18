@@ -17,7 +17,7 @@
             android:name=".main.SubjectInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".main.HomeActivity"
+            android:name=".main.BottomNavActivity"
             android:exported="false" />
         <activity
             android:name=".login.LoginMainActivity"

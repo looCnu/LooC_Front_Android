@@ -34,7 +34,7 @@ class subjectInfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_subject_info, container, false)
+        return inflater.inflate(R.layout.fragment_feed, container, false)
     }
 
     companion object {

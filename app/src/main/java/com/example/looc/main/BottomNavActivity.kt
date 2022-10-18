@@ -1,12 +1,11 @@
 package com.example.looc.main
 
 import android.app.Fragment
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.looc.R
 import com.example.looc.databinding.ActivityHomeBinding
 
-class HomeActivity : BaseActivity() {
+class BottomNavActivity : BaseActivity() {
 
 
     private lateinit var binding: ActivityHomeBinding
@@ -15,7 +14,7 @@ class HomeActivity : BaseActivity() {
     private val fragmentFirstDisplay = mutableListOf(false)
 
     private val fragmentManager = supportFragmentManager
-    private val homeFragment = HomeFragment()
+    private val homeFragment = FeedFragment()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
