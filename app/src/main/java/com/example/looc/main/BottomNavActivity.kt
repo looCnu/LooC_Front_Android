@@ -1,5 +1,6 @@
 package com.example.looc.main
 
+import android.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.looc.R
@@ -11,13 +12,14 @@ class HomeActivity : BaseActivity() {
     private lateinit var binding: ActivityHomeBinding
     //바인딩을 시작한다.
 
+    private val fragmentFirstDisplay = mutableListOf(false)
+
     private val fragmentManager = supportFragmentManager
     private val homeFragment = HomeFragment()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -27,11 +29,23 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun setUpUI() {
-        TODO("Not yet implemented")
         fragmentManager.beginTransaction().apply {
-            add(R.id.container, homeFragment ).commit()
+            add(R.id.container, homeFragment, "home" )
+        }.commit()
+    }
+
+
+    override fun onAttachFragment(fragment: Fragment) {
+        if (fragment is Fragment){
+
         }
     }
 
+    fun onSubjectFragmentViewCreated() {
+        if(!fragmentFirstDisplay[0]){
+            fragmentFirstDisplay[0] = true
+            homeFragment.onFirstDisplay()
+        }
+    }
 
 }
