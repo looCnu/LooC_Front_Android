@@ -11,19 +11,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/SplashTheme"
+        android:theme="@style/Theme.LooC"
         tools:targetApi="31">
         <activity
-            android:name=".main.SubjectInfoActivity"
+            android:name=".view.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".main.BottomNavActivity"
+            android:name=".view.BottomNavActivity"
             android:exported="false" />
         <activity
             android:name=".login.LoginMainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -30,4 +30,13 @@
         <!-- background -->
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
+
+    <style name="Theme.LooC.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.LooC.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.LooC.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

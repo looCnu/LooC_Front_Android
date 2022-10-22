@@ -1,12 +1,17 @@
-package com.example.looc.main
+package com.example.looc.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.looc.R
 
-class SubjectInfoActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_subject_info)
+
+
+        supportFragmentManager.beginTransaction().add(
+            R.id.container,
+            FeedFragment()
+        ).commit()
     }
 }
