@@ -25,6 +25,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/shape_round"
             android:hint="ID"
+            android:lines="1"
             android:backgroundTint="#3C3C48"
             android:textSize="20sp"
             android:textColorHint="@color/white"
@@ -34,6 +35,7 @@
 
         <EditText
             android:id="@+id/login_pwd_et"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
@@ -44,6 +46,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/shape_round"
             android:hint="PASSWORD"
+            android:lines="1"
             android:backgroundTint="#3C3C48"
             android:textSize="20sp"
             android:textColorHint="@color/white"
@@ -61,7 +64,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:padding="23dp"
+            android:padding="5dp"
+            android:textSize="18dp"
             android:text="로그인"
             android:textColor="@color/white">
 
@@ -76,7 +80,6 @@
             android:padding="5dp"
             android:gravity="center"
             android:textColor="@color/white"
-
             >
 
         </TextView>
