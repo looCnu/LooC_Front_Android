@@ -9,6 +9,9 @@ import com.example.looc.R
 import java.text.FieldPosition
 
 class RegisterActivity : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -16,12 +19,55 @@ class RegisterActivity : AppCompatActivity() {
         createSpinner()
 
         val nextBtn = findViewById<Button>(R.id.register_next)
+
         nextBtn.setOnClickListener{
-            val intent = Intent(this, PreferenceActivity::class.java)
-            startActivity(intent)
-            finish()
+
+            val studentId = findViewById<EditText>(R.id.register_student_id).text.toString()
+            val password = findViewById<EditText>(R.id.register_pwd).text.toString()
+            val name = findViewById<EditText>(R.id.register_name).text.toString()
+
+
+            if(studentId.isEmpty() || password.isEmpty() || name.isEmpty()){
+                Toast.makeText(this.applicationContext, "모든 항목을 입력해주세요.", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(this, PreferenceActivity::class.java)
+                intent.putExtra("id", studentId)
+                intent.putExtra("pwd", password)
+                intent.putExtra("name", name)
+                startActivity(intent)
+                finish()
+            }
+
         }
 
+
+
+
+
+
+    }
+
+    private fun doRegister(){
+
+        val studentId = findViewById<EditText>(R.id.register_student_id)
+        val password = findViewById<EditText>(R.id.register_pwd)
+        val name = findViewById<EditText>(R.id.register_name)
+
+        val nextBtn = findViewById<Button>(R.id.register_next)
+
+        nextBtn.setOnClickListener{
+
+            if(studentId.text.isEmpty() || password.text.isEmpty() || name.text.isEmpty()){
+                Toast.makeText(this.applicationContext, "모든 할목을 입력해주세요.", Toast.LENGTH_SHORT)
+            }else{
+                val intent = Intent(this, PreferenceActivity::class.java)
+                intent.putExtra("id", studentId.text)
+                intent.putExtra("pwd", password.text)
+                intent.putExtra("name", name.text)
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
     private fun createSpinner(){

@@ -10,14 +10,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:paddingLeft="20dp"
         android:text="개인정보 입력"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875"
+        tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"

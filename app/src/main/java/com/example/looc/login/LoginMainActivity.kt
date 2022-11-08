@@ -75,13 +75,14 @@ class LoginMainActivity : AppCompatActivity() {
 
             }
 
-            val notMemberPage = findViewById<TextView>(R.id.register_notice_text).setOnClickListener {
-                    val intent = Intent(this, RegisterActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
 
 
+        }
+
+        val notMemberPage = findViewById<TextView>(R.id.register_notice_text).setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
 
