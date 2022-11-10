@@ -17,7 +17,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="SplashTheme" parent="Theme.SplashScreen">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/white</item>
         <item name="colorAccent">@color/white</item>
@@ -27,8 +27,10 @@
         <!-- white status bar -->
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="postSplashScreenTheme">@style/Theme.LooC</item>
         <!-- background -->
-        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/background_splash</item>
+        <item name="android:windowBackground">@color/main_background_color</item>
     </style>
 
     <style name="Theme.LooC.NoActionBar">
@@ -37,6 +39,5 @@
     </style>
 
     <style name="Theme.LooC.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.LooC.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

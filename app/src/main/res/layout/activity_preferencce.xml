@@ -11,12 +11,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:text="선호하시는 키워드를 선택해주세요"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:gravity="center"/>
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,20 +34,21 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="스포츠"
+            android:onClick="onCheckboxClicked"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
+
         <CheckBox
-            android:layout_weight="1"
             android:id="@+id/prefer_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="음악"
             android:textColor="@color/white"
             android:textSize="15sp" />
-
 
         <CheckBox
             android:layout_weight="1"
@@ -109,6 +109,7 @@
 
 
     <Button
+        android:id="@+id/prefer_next_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"

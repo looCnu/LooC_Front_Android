@@ -1,22 +1,20 @@
-package com.example.looc.db
+package com.example.looc.data
+
 
 import com.google.gson.annotations.SerializedName
 
-data class Member (
-
+data class RegisterDetails(
     @SerializedName("student_id")
     val studentId: String,
-
     @SerializedName("password")
-    val pwd: String,
-
+    val password: String,
     @SerializedName("name")
     val name: String,
-
     @SerializedName("college")
-    val college : String,
-
+    val college: String,
     @SerializedName("preference")
-    val preference : List<String>,
+    val preference: List<String>
 
-    )
+)
+
+

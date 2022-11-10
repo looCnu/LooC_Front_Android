@@ -9,7 +9,6 @@
     tools:context=".view.MainActivity">
 
 
-
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -26,8 +25,28 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_recycler_view"
-            android:layout_weight="1"
+            android:id="@+id/recommend_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_poster" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_score_recycler_view"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_poster" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/similar_recycler_view"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nestedScrollingEnabled="false"
@@ -36,6 +55,7 @@
             tools:listitem="@layout/item_poster" />
 
     </LinearLayout>
+
 
 
 
