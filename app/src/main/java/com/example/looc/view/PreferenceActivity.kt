@@ -38,22 +38,22 @@ class PreferenceActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
 
-//            val retrofit = RetrofitClient.retrofit
-//
-//            retrofit.create(RetrofitInterface::class.java).register(registerDetails).enqueue(object : Callback<RegisterDetails>{
-//                override fun onResponse(
-//                    call: Call<RegisterDetails>,
-//                    response: Response<RegisterDetails>
-//                ) {
-//                    val responseRegisterDetails = response.body()
-//                    Log.d("testt", responseRegisterDetails!!.name.toString())
+            val retrofit = RetrofitClient.retrofit
 
-//                }
-//
-//                override fun onFailure(call: Call<RegisterDetails>, t: Throwable) {
-//                    Log.d("testt", "회원가입 요청 실패")
-//                }
-//            })
+            retrofit.create(RetrofitInterface::class.java).register(registerDetails).enqueue(object : Callback<RegisterDetails>{
+                override fun onResponse(
+                    call: Call<RegisterDetails>,
+                    response: Response<RegisterDetails>
+                ) {
+                    val responseRegisterDetails = response.body()
+                    Log.d("testt", responseRegisterDetails!!.name.toString())
+
+                }
+
+                override fun onFailure(call: Call<RegisterDetails>, t: Throwable) {
+                    Log.d("testt", "회원가입 요청 실패")
+                }
+            })
         }
 
 

@@ -1,14 +1,21 @@
 package com.example.looc.view
 
+import RetrofitInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.looc.R
+import com.example.looc.data.LoginData
+import com.example.looc.server.RetrofitClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -20,10 +27,8 @@ class LoginMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_main)
 
-        var retrofit = Retrofit.Builder()
-            .baseUrl("https://172.16.0.94:5000")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+        var retrofit = RetrofitClient.retrofit
+
         var dialog = AlertDialog.Builder(this@LoginMainActivity)
         //var loginService: LoginService = retrofit.create(LoginService::class.java)
         val loginBtn = findViewById<Button>(R.id.login_btn)
@@ -37,8 +42,25 @@ class LoginMainActivity : AppCompatActivity() {
                 Toast.makeText(this.applicationContext, "아이디, 비밀번호를 입력해주세요", Toast.LENGTH_SHORT)
                     .show()
             } else {
-                //val dataModal : DataModal = DataModal(loginId, loginPw)
 
+                val loginData : LoginData = LoginData(loginId, loginPw)
+
+                retrofit.create(RetrofitInterface::class.java).login(loginData).enqueue(object : Callback<LoginData>
+                {
+
+                    override fun onResponse(call: Call<LoginData>, response: Response<LoginData>) {
+                        Log.d("testt", response.message().toString())
+                        if (response.isSuccessful){
+                            val responseLogin = response.body()
+                            Log.d("testt", responseLogin!!.studentId)
+                            val intent = Intent(applicationContext, MainActivity::class.java)
+                        }
+                    }
+
+                    override fun onFailure(call: Call<LoginData>, t: Throwable) {
+                        Log.d("testt", "login fail")
+                    }
+                })
 //                loginService.requestLogin(dataModal).enqueue(object : Callback<Login> {
 //                    override fun onResponse(call: Call<Login>, response: Response<Login>) {
 //                        login = response.body()
@@ -56,15 +78,7 @@ class LoginMainActivity : AppCompatActivity() {
 //                    }
 //                })
 
-
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-
-
             }
-
-
 
         }
 

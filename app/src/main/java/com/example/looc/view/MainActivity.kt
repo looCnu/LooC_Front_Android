@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         val recommendLectureList = mutableListOf<LecturePoster>()
         val topScoreLectureList = mutableListOf<LecturePoster>()
         val similarLectureList = mutableListOf<LecturePoster>()
+        val similar2LectureList = mutableListOf<LecturePoster>()
 
         val retrofit = RetrofitClient.retrofit
         retrofit.create(RetrofitInterface::class.java).attachPoster().enqueue(object : Callback<ArrayList<LecturePoster>>{
@@ -86,10 +87,12 @@ class MainActivity : AppCompatActivity() {
         val recommendRecyclerView = findViewById<RecyclerView>(R.id.recommend_recycler_view)
         val topScoreRecyclerView = findViewById<RecyclerView>(R.id.top_score_recycler_view)
         val similarRecyclerView = findViewById<RecyclerView>(R.id.similar_recycler_view)
+        val similar2RecyclerView = findViewById<RecyclerView>(R.id.similar2_recycler_view)
 
         recommendRecyclerView.adapter = RecyclerViewAdapter(recommendLectureList, LayoutInflater.from(this))
         topScoreRecyclerView.adapter = RecyclerViewAdapter(topScoreLectureList, LayoutInflater.from(this))
         similarRecyclerView.adapter = RecyclerViewAdapter(similarLectureList, LayoutInflater.from(this))
+        similar2RecyclerView.adapter = RecyclerViewAdapter(similar2LectureList, LayoutInflater.from(this))
 
 
 
@@ -121,11 +124,10 @@ class RecyclerViewAdapter(
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         //inner class
         val lectureImage : ImageView
-        val lectureName : TextView
+
         val context = itemView.context
         init {
             lectureImage = itemView.findViewById(R.id.poster_image)
-            lectureName = itemView.findViewById(R.id.poster_name)
             itemView.setOnClickListener {
                 val intent = Intent(context, DetailedPageActivity::class.java)
                 intent.run { context.startActivity(this) }

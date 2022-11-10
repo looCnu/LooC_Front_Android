@@ -18,13 +18,5 @@
         android:scaleType="centerCrop"
         android:background="@drawable/poster_bg" />
 
-    <TextView
-        android:id="@+id/poster_name"
-        android:layout_width="105dp"
-        android:layout_height="20dp"
-        android:text="과목"
-        android:textAlignment="center"
-        android:textColor="@color/black"/>
-
 
 </LinearLayout>

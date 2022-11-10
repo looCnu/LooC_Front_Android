@@ -9,54 +9,79 @@
     tools:context=".view.MainActivity">
 
 
-    <LinearLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+
 
         <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="1"
+            android:layout_height="260dp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/fragment_first"
             android:name="com.example.looc.view.FeedFragment"/>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recommend_recycler_view"
+        <androidx.core.widget.NestedScrollView
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_poster" />
+            android:layout_height="550dp"
+            android:fillViewport="true"
+            >
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/top_score_recycler_view"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_poster" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:descendantFocusability="blocksDescendants">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/similar_recycler_view"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recommend_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_poster" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/item_poster" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/top_score_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_poster" />
 
-    </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/similar_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_marginBottom="10dp"
+                    tools:listitem="@layout/item_poster" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/similar2_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_marginBottom="10dp"
+                    tools:listitem="@layout/item_poster" />
 
 
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        </androidx.core.widget.NestedScrollView>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -67,6 +92,6 @@
         android:background="@color/black"
         app:itemIconTint="@color/bottom_navigation_color"
         app:itemTextColor="@color/bottom_navigation_color"
-        app:menu="@menu/bottom_navigation_menu"/>
+        app:menu="@menu/bottom_navigation_menu" />
 
 </LinearLayout>
