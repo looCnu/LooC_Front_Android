@@ -1,19 +1,17 @@
-import com.example.looc.data.LecturePoster
-import com.example.looc.data.LoginData
-import com.example.looc.data.RegisterDetails
+import com.example.looc.data.*
 import retrofit2.Call
 import retrofit2.http.*
 
 interface  RetrofitInterface {
 
     @POST("sign-up")
-    fun register(@Body registerDetail : RegisterDetails): Call<RegisterDetails>
+    fun register(@Body registerDetail : RegisterDetails): Call<RegisterResult>
 
-    @POST("/sign-in/looC")
-    fun login(@Body loginData: LoginData):Call<LoginData>
+    @POST("sign-in")
+    fun login(@Body loginData: LoginData):Call<LoginResult>
 
-    @GET("/looC/lecture")
-    fun attachPoster(): Call<ArrayList<LecturePoster>>
+    @GET("lectures")
+    fun getLectures(): Call<ArrayList<LectureDetailItem>>
 
 
 

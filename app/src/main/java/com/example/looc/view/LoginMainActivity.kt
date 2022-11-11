@@ -12,7 +12,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.looc.R
 import com.example.looc.data.LoginData
+import com.example.looc.data.LoginResult
 import com.example.looc.server.RetrofitClient
+import okhttp3.Cookie
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -45,20 +47,29 @@ class LoginMainActivity : AppCompatActivity() {
 
                 val loginData : LoginData = LoginData(loginId, loginPw)
 
-                retrofit.create(RetrofitInterface::class.java).login(loginData).enqueue(object : Callback<LoginData>
+                retrofit.create(RetrofitInterface::class.java).login(loginData).enqueue(object : Callback<LoginResult>
                 {
-
-                    override fun onResponse(call: Call<LoginData>, response: Response<LoginData>) {
+                    override fun onResponse(
+                        call: Call<LoginResult>,
+                        response: Response<LoginResult>
+                    ) {
                         Log.d("testt", response.message().toString())
                         if (response.isSuccessful){
+
                             val responseLogin = response.body()
-                            Log.d("testt", responseLogin!!.studentId)
-                            val intent = Intent(applicationContext, MainActivity::class.java)
+                            Log.d("testt", ""+response.headers().get("Cookie"))
+                            if (responseLogin!!.success == true){
+                                val intent = Intent(applicationContext, MainActivity::class.java)
+                                startActivity(intent)
+                            }else{
+                                Toast.makeText(applicationContext, "아이디 혹은 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
+                            }
+
                         }
                     }
 
-                    override fun onFailure(call: Call<LoginData>, t: Throwable) {
-                        Log.d("testt", "login fail")
+                    override fun onFailure(call: Call<LoginResult>, t: Throwable) {
+                        Log.d("testt", "로그인 실패")
                     }
                 })
 //                loginService.requestLogin(dataModal).enqueue(object : Callback<Login> {

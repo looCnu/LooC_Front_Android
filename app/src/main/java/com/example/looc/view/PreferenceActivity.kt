@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import com.example.looc.R
 import com.example.looc.data.RegisterDetails
+import com.example.looc.data.RegisterResult
 import com.example.looc.server.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,25 +35,25 @@ class PreferenceActivity : AppCompatActivity() {
 
             val registerDetails : RegisterDetails = RegisterDetails(studentID!!, password!!, name!!, "컴퓨터 융합학부" , preferList)
 
-            val intent = Intent(this, ProgressBarActivity::class.java)
-            startActivity(intent)
-            finish()
-
             val retrofit = RetrofitClient.retrofit
 
-            retrofit.create(RetrofitInterface::class.java).register(registerDetails).enqueue(object : Callback<RegisterDetails>{
+            retrofit.create(RetrofitInterface::class.java).register(registerDetails).enqueue(object : Callback<RegisterResult>{
                 override fun onResponse(
-                    call: Call<RegisterDetails>,
-                    response: Response<RegisterDetails>
+                    call: Call<RegisterResult>,
+                    response: Response<RegisterResult>
                 ) {
-                    val responseRegisterDetails = response.body()
-                    Log.d("testt", responseRegisterDetails!!.name.toString())
-
+                    val result = response.body()
+                    if (result!!.success){
+                        val intent = Intent(applicationContext, ProgressBarActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
                 }
 
-                override fun onFailure(call: Call<RegisterDetails>, t: Throwable) {
-                    Log.d("testt", "회원가입 요청 실패")
+                override fun onFailure(call: Call<RegisterResult>, t: Throwable) {
+                    Log.d("testt", "회원 가입 실패")
                 }
+
             })
         }
 

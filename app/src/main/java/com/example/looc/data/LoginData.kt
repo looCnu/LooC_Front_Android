@@ -9,3 +9,8 @@ data class LoginData(
     @SerializedName("password")
     val password: String
 )
+
+data class LoginResult(
+    @SerializedName("success")
+    val success: Boolean,
+)

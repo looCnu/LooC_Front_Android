@@ -17,4 +17,9 @@ data class RegisterDetails(
 
 )
 
+data class RegisterResult(
+    @SerializedName("success")
+    val success: Boolean
+)
+
 

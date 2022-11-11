@@ -7,7 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".view.LoginMainActivity">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -18,56 +31,53 @@
             android:id="@+id/login_id_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/shape_round"
+            android:backgroundTint="#3C3C48"
             android:hint="ID"
             android:lines="1"
-            android:backgroundTint="#3C3C48"
-            android:textSize="20sp"
-            android:textColorHint="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             android:textColor="@color/white"
-            >
-        </EditText>
+            android:textColorHint="@color/white"
+            android:textSize="20sp"></EditText>
 
         <EditText
             android:id="@+id/login_pwd_et"
-            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingLeft="20dp"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/shape_round"
-            android:hint="PASSWORD"
-            android:lines="1"
             android:backgroundTint="#3C3C48"
-            android:textSize="20sp"
-            android:textColorHint="@color/white"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             android:textColor="@color/white"
-            >
+            android:textColorHint="@color/white"
+            android:textSize="20sp">
 
         </EditText>
 
 
         <Button
             android:id="@+id/login_btn"
-            android:background="@drawable/shape_round"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/shape_round"
             android:padding="5dp"
-            android:textSize="18dp"
             android:text="로그인"
-            android:textColor="@color/white">
+            android:textColor="@color/white"
+            android:textSize="18dp">
 
         </Button>
 
@@ -75,20 +85,13 @@
             android:id="@+id/register_notice_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="아직 회원이 아니신가요?"
             android:layout_marginTop="20dp"
-            android:padding="5dp"
             android:gravity="center"
-            android:textColor="@color/white"
-            >
+            android:padding="5dp"
+            android:text="아직 회원이 아니신가요?"
+            android:textColor="@color/white">
 
         </TextView>
-
-
-
-
-
-
 
 
     </LinearLayout>
