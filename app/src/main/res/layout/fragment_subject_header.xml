@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     >
 
+
     <ImageView
         android:id="@+id/background_image"
         android:layout_width="match_parent"
@@ -16,24 +17,27 @@
         android:src="@drawable/main_header"
         />
 
-    <LinearLayout
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_vw"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginRight="20dp"
+        app:iconifiedByDefault="false"
+
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:orientation="vertical">
+        android:layout_height="20dp"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.3"
-            android:background="@drawable/gradient_top_bottom_bg"
-            />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/logo"
+        />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"/>
 
-    </LinearLayout>
 
 
     <LinearLayout
@@ -41,6 +45,7 @@
         android:layout_height="250dp"
         android:gravity="bottom"
         android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,15 +55,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:text="Select the lecture you want"
-                android:textColor="@color/white"
-                android:textSize="12sp"/>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -91,6 +88,7 @@
                         android:layout_marginTop="2dp"
                         android:textColor="@color/white"
                         android:text="수강평"
+                        android:fontFamily="@font/gmarketsansmedium"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -110,7 +108,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/subject_reputation"
+                        android:src="@drawable/calender64"
                         app:tint="@color/white"/>
 
                     <TextView
@@ -118,7 +116,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:textColor="@color/white"
-                        android:text="수강평"
+                        android:text="시간표"
+                        android:fontFamily="@font/gmarketsansmedium"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -137,7 +136,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="22dp"
-                        android:src="@drawable/subject_reputation"
+                        android:src="@drawable/board"
                         app:tint="@color/white"/>
 
                     <TextView
@@ -145,14 +144,16 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:textColor="@color/white"
-                        android:text="수강평"
+                        android:text="게시판"
+                        android:fontFamily="@font/gmarketsansmedium"
                         android:textSize="12sp" />
 
                 </LinearLayout>
-
 
 
             </LinearLayout>
+
+
 
 
 

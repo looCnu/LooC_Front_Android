@@ -13,7 +13,8 @@
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="선호하시는 키워드를 선택해주세요"
+        android:text="선호하시는 키워드를 \n4개 이상 선택해주세요"
+        android:fontFamily="@font/gmarketsansbold"
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -33,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:fontFamily="@font/gmarketsansmedium"
             android:text="스포츠"
             android:onClick="onCheckboxClicked"
             android:textColor="@color/white"
@@ -44,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/gmarketsansmedium"
             android:layout_weight="1"
             android:gravity="center"
             android:text="음악"
@@ -56,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/gmarketsansmedium"
             android:gravity="center"
             android:text="언어"
             android:textColor="@color/white"
@@ -69,6 +73,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal"
         >
 
@@ -77,9 +82,10 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="세계 문화"
+            android:text="조별과제"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -87,10 +93,11 @@
             android:layout_weight="1"
             android:id="@+id/prefer_sw"
             android:layout_width="match_parent"
+            android:fontFamily="@font/gmarketsansmedium"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="SW"
+            android:text="오후수업"
             android:textColor="@color/white"
             android:textSize="15sp" />
 
@@ -100,6 +107,96 @@
             android:id="@+id/prefer_low"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="실습"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="연애"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="오전수업"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="애니"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="액티비티"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="졸업"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="법학"
@@ -107,12 +204,61 @@
             android:textSize="15sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="세계 문화"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="금요일 공강"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="야외수업"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+
 
     <Button
         android:id="@+id/prefer_next_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:textSize="16sp"
+        android:fontFamily="@font/gmarketsansmedium"
+        android:text="다음"
         android:layout_margin="30dp"
         android:background="@drawable/shape_round"/>
 

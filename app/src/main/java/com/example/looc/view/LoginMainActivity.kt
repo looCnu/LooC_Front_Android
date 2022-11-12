@@ -61,6 +61,7 @@ class LoginMainActivity : AppCompatActivity() {
                             if (responseLogin!!.success == true){
                                 val intent = Intent(applicationContext, MainActivity::class.java)
                                 startActivity(intent)
+                                finish()
                             }else{
                                 Toast.makeText(applicationContext, "아이디 혹은 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
                             }

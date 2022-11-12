@@ -58,8 +58,6 @@ class PreferenceActivity : AppCompatActivity() {
         }
 
 
-        Log.d("testt", "1. " + studentID + "" + password + "" + name)
-
 
     }
 

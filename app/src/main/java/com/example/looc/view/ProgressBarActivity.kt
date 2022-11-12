@@ -26,9 +26,9 @@ class ProgressBarActivity : AppCompatActivity() {
         primaryProgressStatus = 0
         secondaryProgressStatus = 0
 
-        Thread(Runnable {
+        val t = Thread(Runnable {
             while (primaryProgressStatus < 100) {
-                primaryProgressStatus += 1
+                primaryProgressStatus += 5
 
                 try {
                     Thread.sleep(500)
@@ -54,13 +54,12 @@ class ProgressBarActivity : AppCompatActivity() {
             }
         }).start()
 
-
     }
 
     fun startSecondaryProgress() {
         Thread(Runnable {
             while (secondaryProgressStatus < 100) {
-                secondaryProgressStatus += 1
+                secondaryProgressStatus += 5
 
                 try {
                     Thread.sleep(10)

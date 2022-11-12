@@ -9,178 +9,325 @@
     tools:context=".view.DetailedPageActivity">
 
 
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:paddingRight="280dp"
         android:src="@drawable/splash_logo"/>
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shape_round"
-        android:backgroundTint="#2E2E3A"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
         android:layout_marginBottom="20dp"
-        android:orientation="vertical"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-        <FrameLayout
+        <LinearLayout
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_round"
+            android:backgroundTint="#2E2E3A"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
             >
 
-            <ImageView
-                android:id="@+id/background_image"
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"
-                android:src="@drawable/main_header"
-                />
+                android:layout_height="wrap_content"
+                >
 
-            <LinearLayout
+                <ImageView
+                    android:id="@+id/background_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/main_header"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_bottom_nav2" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.3"
-                    android:background="@drawable/gradient_bottom_nav2" />
+                    android:id="@+id/lecture_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/gmarketsansbold"
+                    android:text="스키"
+                    android:textColor="#DACDCD"
+                    android:textSize="40dp"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"/>
+                <TextView
+                    android:id="@+id/lecture_score"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFEA00"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:text="4.7/5점">
 
-            </LinearLayout>
-        </FrameLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="스키"
-            android:textColor="#DACDCD"
-            android:textSize="40dp"/>
+                </TextView>
 
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="10dp"
-            android:orientation="horizontal">
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lecture_keyword1"
+                    android:layout_width="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_round"
+                    android:text="">
+
+                </TextView>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/lecture_keyword2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_round"
+                    android:text="">
+
+                </TextView>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/lecture_keyword3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_round"
+                    android:text="">
+
+                </TextView>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/lecture_keyword4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_round"
+                    android:text="">
+
+                </TextView>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_margin="10dp"
+                    android:text="상세정보"/>
+
+                <TextView
+                    android:id="@+id/lecture_time"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9A9DA5"
+                    android:fontFamily="@font/gmarketsansmedium"
+                    android:layout_margin="10dp"
+                    android:text="월18:00~21:00"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            <TextView
+                android:id="@+id/lecture_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:fontFamily="@font/gmarketsanslight"
+                android:textStyle="bold"
+                android:text="스키는 자연친화적인 환경 속에서의 정신적 긴장의 해소와 인간관계 및 사회성 형성에 도움이 되는 운동종목으로 생활스포츠로 확고히 자리를 잡은 대중스포츠로서, 운동의 조건인 유희성, 안전성, 효과성을 모두 가지고 있다. 특히, 하지근력, 유연성, 심폐기능 향상은 물론 스트레스 해소를 위한 운동으로 각광받는 스키를 이론 강의 및 스키의 기술을 습득할 수 있는 강의로 구성되어 있다."
                 android:textColor="@color/white"
-                android:background="@drawable/shape_round"
-                android:text="운동">
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="5dp">
 
             </TextView>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_margin="10dp"
-            android:text="상세정보"/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="LinearLayout 안에 든 뷰는 방향을 지정하여 정렬할 수 있다. 뷰를 정렬할 때는 layout_gravity와 gravity 속성을 사용한다. 두개의 속성은 이름은 비슷하지만 서로 다른 역할을 한다. layout_gravity 속성은 뷰의 위치를, gravity는 뷰에 든 내용물들의 위치를 변경한다. "
-            android:textColor="@color/white"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginBottom="5dp">
-
-        </TextView>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#9A9DA5"
-                android:text="교수명"
-                android:layout_marginBottom="3dp"
-                >
-            </TextView>
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9A9DA5"
+                    android:text="교수명"
+                    android:layout_marginBottom="3dp"
+                    >
+                </TextView>
 
-            <TextView
+                <TextView
+                    android:id="@+id/lecture_professor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="조두용"
+                    >
+                </TextView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="교수명"
-                >
-            </TextView>
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9A9DA5"
+                    android:fontFamily="@font/gmarketsanslight"
+                    android:text="학점"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="3dp"
+                    >
+                </TextView>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-            <TextView
+                <TextView
+                    android:id="@+id/lecture_credit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gmarketsanslight"
+                    android:textStyle="bold"
+                    android:text="2학점"
+                    >
+                </TextView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#9A9DA5"
-                android:text="교수명"
-                android:layout_marginBottom="3dp"
-                >
-            </TextView>
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9A9DA5"
+                    android:fontFamily="@font/gmarketsanslight"
+                    android:textStyle="bold"
+                    android:text="세부분류"
+                    android:layout_marginBottom="3dp"
+                    >
+                </TextView>
 
-            <TextView
+                <TextView
+                    android:id="@+id/lecture_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/gmarketsanslight"
+                    android:text="일반교양"
+                    >
+                </TextView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="교수명"
-                >
-            </TextView>
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9A9DA5"
+                    android:fontFamily="@font/gmarketsanslight"
+                    android:textStyle="bold"
+                    android:text="강의실"
+                    android:layout_marginBottom="3dp"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/lecture_room"
+                    android:fontFamily="@font/gmarketsanslight"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="공5411"
+                    >
+                </TextView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
 
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#9A9DA5"
-                android:text="교수명"
-                android:layout_marginBottom="3dp"
-                >
-            </TextView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="교수명"
-                >
-            </TextView>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

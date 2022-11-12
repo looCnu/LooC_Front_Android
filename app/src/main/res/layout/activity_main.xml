@@ -14,20 +14,8 @@
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="260dp"
-        android:layout_marginBottom="10dp"
         android:id="@+id/fragment_first"
         android:name="com.example.looc.view.FeedFragment"/>
-
-    <ImageView
-        android:id="@+id/test_image"
-        android:layout_width="105dp"
-        android:layout_height="140dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/poster_bg">
-
-    </ImageView>
-
-
 
 
     <androidx.core.widget.NestedScrollView
@@ -38,52 +26,93 @@
         android:fillViewport="true"
         >
 
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:descendantFocusability="blocksDescendants">
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="looC이 kei님께 추천해 드리는 강의"
+                android:textSize="12sp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/gmarketsansmedium">
+            </TextView>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recommend_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_poster" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="컴퓨터융합학부에서 인기 과목"
+                android:textSize="12sp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/white"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/gmarketsansmedium">
+            </TextView>
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/top_score_recycler_view"
+                android:id="@+id/department_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_poster" />
 
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="숨이 벅차오르는 운동 수업"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="3dp"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/gmarketsansmedium">
+            </TextView>
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/similar_recycler_view"
+                android:id="@+id/sport_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 tools:listitem="@layout/item_poster" />
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="집순이들을 위한 온라인 수업"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="3dp"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/gmarketsansmedium">
+            </TextView>
+
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/similar2_recycler_view"
+                android:id="@+id/online_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 tools:listitem="@layout/item_poster" />
 
 

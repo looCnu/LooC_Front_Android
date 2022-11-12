@@ -29,6 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/gmarketsansmedium"
             android:textColor="@color/white" />
 
         <TextView
@@ -36,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:fontFamily="@font/gmarketsansmedium"
             android:layout_below="@+id/progressBarSecondary"
             android:textColor="@color/white" />
 

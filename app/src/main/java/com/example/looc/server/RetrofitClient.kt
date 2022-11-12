@@ -1,5 +1,6 @@
 package com.example.looc.server
 
+import RetrofitInterface
 import okhttp3.JavaNetCookieJar
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingLeft="20dp"
+        android:fontFamily="@font/gmarketsansmedium"
         android:text="개인정보 입력"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -50,9 +51,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:paddingLeft="24dp"
-                android:paddingRight="24dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:text="학번"
+                android:fontFamily="@font/gmarketsansmedium"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
 
@@ -65,6 +67,7 @@
                 android:backgroundTint="#B8B8B8"
                 android:hint="학번을 입력하세요"
                 android:lines="1"
+                android:fontFamily="@font/gmarketsanslight"
                 android:paddingLeft="20dp"
                 android:textColorHint="#AD2E2D2D"
                 android:textSize="15sp" />
@@ -83,6 +86,7 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/gmarketsansmedium"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:gravity="center"
@@ -97,6 +101,7 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/shape_round"
                 android:backgroundTint="#B8B8B8"
+                android:fontFamily="@font/gmarketsanslight"
                 android:hint="비밀번호를 입력하세요"
                 android:lines="1"
                 android:paddingLeft="20dp"
@@ -118,6 +123,7 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/gmarketsansmedium"
                 android:gravity="center"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
@@ -133,6 +139,7 @@
                 android:backgroundTint="#B8B8B8"
                 android:hint="이름을 입력하세요"
                 android:lines="1"
+                android:fontFamily="@font/gmarketsanslight"
                 android:paddingLeft="20dp"
                 android:textColorHint="#AD2E2D2D"
                 android:textSize="15sp" />
@@ -157,6 +164,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:paddingLeft="24dp"
+                android:fontFamily="@font/gmarketsansmedium"
                 android:paddingRight="24dp"
                 android:text="학과"
                 android:textColor="@color/white"
@@ -174,6 +182,7 @@
                 android:id="@+id/result2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/gmarketsanslight"
                 android:text="TextView" />
 
         </LinearLayout>
@@ -182,11 +191,12 @@
         <Button
             android:id="@+id/register_next"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/gmarketsansmedium"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@drawable/shape_round"
-            android:text="NEXT" />
+            android:text="다음" />
 
 
     </LinearLayout>

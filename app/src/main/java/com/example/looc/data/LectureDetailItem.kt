@@ -5,25 +5,25 @@ import com.google.gson.annotations.SerializedName
 
 data class LectureDetailItem(
     @SerializedName("lecture_id")
-    val lectureId: String,
+    val lectureId: String?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("time")
-    val time: String,
+    val time: String?,
     @SerializedName("description")
-    val description: String,
+    val description: String?,
     @SerializedName("credit")
-    val credit: Int,
+    val credit: Int?,
     @SerializedName("image")
-    val image: String,
+    val image: String?,
     @SerializedName("room")
-    val room: String,
+    val room: String?,
     @SerializedName("professor")
-    val professor: String,
+    val professor: String?,
     @SerializedName("category")
-    val category: String,
+    val category: String?,
     @SerializedName("keyword")
-    val keyword: List<String>,
+    val keyword: List<String>?,
     @SerializedName("score")
-    val score: Double
+    val score: Double?
 )
